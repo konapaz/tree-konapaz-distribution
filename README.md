@@ -68,4 +68,10 @@ N(k=0) -> Ν(k=9) -> N(k=16) -> L(k=18)
 --------------------------------------
 
 No more Iterator of Recursive search required because we got all Nine Leaf Nodes! 
-Final results it should be a list with nodes key 3,9,12,6,15,4,17,13,18
+Final results it should be a list with nodes key:
+
+3,9,12,6,15,4,17,13,18
+
+--------------------------------------
+PS:
+No matter how weird it may seem to you... I needed this code for a special merchant client! :)
