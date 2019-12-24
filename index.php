@@ -7,7 +7,7 @@ Assume We have a Tree (Not necessarily Βinary -or Balanced- Tree)
 We want to get a list of its Leafs but not in standard way like pre-order post-order in-order ( https://en.wikipedia.org/wiki/Tree_traversal ) 
 We want a balanced-circular order from the top to the bottom Parents Node and get only the Leafs into results, so recursive standard algorithms cannot be Applied.
 
-For example, from the tree of the picture (https://github.com/konapaz/tree-konapaz-distribution/blob/master/tree-konapaz-distribution.png) we want to give balanced priority for each level Node (Started from Level 1, Nodes with k=1,7,9) So we get the first one Leaf from Node(k=1) then from Node(k=7) and then from Node(k=9) (where Leafs exists in sub-tree). Over and Over again (in Circular terms 1,7,9,1,7,9... ... 1,7,9) until we get all Leafs of the tree.
+For example, from the tree of the picture https://github.com/konapaz/tree-konapaz-distribution/blob/master/tree-konapaz-distribution.png we want to give balanced priority for each level Node (Started from Level 1, Nodes with k=1,7,9) So we get the first one Leaf from Node(k=1) then from Node(k=7) and then from Node(k=9) (where Leafs exists in sub-tree). Over and Over again (in Circular terms 1,7,9,1,7,9... ... 1,7,9) until we get all Leafs of the tree.
 The same Rule should be Applied to all Node's Levels 2,3,4,5... Until we reach the Leaf's Level. 
 Note we don't want to apply the circular rule to the Leaf's Level.
 
