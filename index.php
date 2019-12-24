@@ -1,11 +1,13 @@
 <?php
+//https://github.com/konapaz/tree-konapaz-distribution
+
 /* 
 Assume We have a Tree (Not necessarily Βinary -or Balanced- Tree)
 
 We want to get a list of its Leafs but not in standard way like pre-order post-order in-order ( https://en.wikipedia.org/wiki/Tree_traversal ) 
 We want a balanced-circular order from the top to the bottom Parents Node and get only the Leafs into results, so recursive standard algorithms cannot be Applied.
 
-For example, from the below tree we want to give balanced priority for each level Node (Started from Level 1, Nodes with k=1,7,9) So we get the first one Leaf from Node(k=1) then from Node(k=7) and then from Node(k=9) (where Leafs exists in sub-tree). Over and Over again (in Circular terms 1,7,9,1,7,9... ... 1,7,9) until we get all Leafs of the tree.
+For example, from the tree of the picture (https://github.com/konapaz/tree-konapaz-distribution/blob/master/tree-konapaz-distribution.png) we want to give balanced priority for each level Node (Started from Level 1, Nodes with k=1,7,9) So we get the first one Leaf from Node(k=1) then from Node(k=7) and then from Node(k=9) (where Leafs exists in sub-tree). Over and Over again (in Circular terms 1,7,9,1,7,9... ... 1,7,9) until we get all Leafs of the tree.
 The same Rule should be Applied to all Node's Levels 2,3,4,5... Until we reach the Leaf's Level. 
 Note we don't want to apply the circular rule to the Leaf's Level.
 
@@ -42,29 +44,6 @@ N(k=0) -> Ν(k=9) -> N(k=16) -> L(k=18)
 No more Iterator of Recursive search required because we got all Nine Leaf Nodes! 
 Final results it should be a list with nodes key 3,9,12,6,15,4,17,13,18
 
-
-Level 0:							    N(k=0) ---.
-									   /|          \
-									  / |           \	   
-									 /  |            \	   
-									/   |             \	   
-								   /    |              \	   
-								  /	    |               \   
-								 /      |  	             \	
-Level 1:					N(k=1)	N(k=7)		        N(k=9)
-							 /\	   	  \				 /	   |    \
-							/  \	   \			/	   |     \
-						   /	\	    \		   /       |      \
-Level 2:				N(k=2)	N(k=5)	N(k=8)	  N(k=11)  N(k=14) N(k=16) --------.
-						 / \	   \	  \			|    \		 \		 \          \
-						/   \	    \	   \		| 	  \		  \		  \	  		 \
-Level 3:			L(k=3)	L(k=4)  L(k=6)	L(k=9) L(k=12) L(k=13) L(k=15) L(k=17)	L(k=18)
-
-N = Node (as a Connection between other Nodes to reach the Leafs)
-L = Leaf (Node as data-target Object)
-k = any index to identify our nodes
-
-*/
 
 
 /*
